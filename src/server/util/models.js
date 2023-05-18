@@ -32,6 +32,14 @@ module.exports = {
         description: {
             type: DataTypes.STRING({length: 300}),
             allowNull: false,
+        },
+        type: {
+            type: DataTypes.STRING({length: 30}),
+            allowNull: false
+        },
+        time: {
+            type: DataTypes.INTEGER,
+            allowNull: false
         }
     }),
     Like: db.define("like", {

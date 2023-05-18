@@ -1,5 +1,5 @@
 header {
-    background-color: #39A2DB;
+    background-color: #053742;
     height: 60px;
     width: 100%;
     display: flex;
@@ -22,17 +22,21 @@ h1 {
 }
 
 .nav_button {
-    background-color: #39A2DB;
+    background-color: #053742;
     font-size: 24px;
     color: #E8F0F2;
     margin-left: 50px;
     margin-right: 10px;
 }
 
+p{
+    color: #E8F0F2;
+}
+
 footer {
     height: 75px;
     width: 100%;
-    background-color: #39A2DB;
+    background-color: #053742;
     display: flex;
     align-items: center;
     justify-content: space-around;
