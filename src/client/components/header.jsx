@@ -9,7 +9,7 @@ const Header = () => {
             <nav>
                 <button className={classes.nav_button}>Home</button>
                 <button className={classes.nav_button}>Profile</button>
-                <button className={classes.nav_button}>Search</button>
+                <button className={classes.nav_button}>Goals</button>
             </nav>
         </header>
     )
