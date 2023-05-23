@@ -38,9 +38,9 @@ module.exports = {
                     exp})
             }
         } catch (error) {
-            console.log("REGISTER")
+            console.log('ERROR IN register')
             console.log(error)
-            res.status(200).send("Registered")
+            res.sendStatus(400)
         }
         
     },
@@ -59,7 +59,8 @@ module.exports = {
                         username: foundUser.dataValues.username, 
                         userId: foundUser.dataValues.id,
                         token, 
-                        exp})
+                        exp
+                    })
                 } else {
                     res.status(400).send('Cannot log in')
                 }
@@ -67,9 +68,9 @@ module.exports = {
                 res.status(400).send('Cannot log in')
             }
         } catch (error) {
-            console.log("LOGIN")
+            console.log('ERROR IN register')
             console.log(error)
-            res.status(200).send("Logged In")
+            res.sendStatus(400)
         }
 
     },
