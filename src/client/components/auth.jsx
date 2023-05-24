@@ -3,11 +3,10 @@ import axios from "axios";
 import AuthContext from "./store/authContext";
 
 const Auth = () => {
-    const [register, setRegister] = useState()
-    const [username, setUsername] = useState()
-    const [password, setPassword] = useState()
-    const [message, setMessage] = useState()
-    const [display, setDisplay] = useState()
+    const [register, setRegister] = useState(true)
+    const [username, setUsername] = useState('')
+    const [password, setPassword] = useState('')
+    const [display, setDisplay] = useState('none')
 
     const authCtx = useContext(AuthContext)
 
@@ -21,15 +20,14 @@ const Auth = () => {
             password
         }
 
-        // const url = lol idk
         
-        axios.post(register ? `${url}/register` : `${url}/login`, body)
+        axios.post(register ? `/register` : `/login`, body)
             .then((res) => {
                 console.log('AFTER AUTH', res.data)
                 authCtx.login(res.data.token, res.data.exp, res.data.userId)
             })
             .catch(err => {
-                setMessage(err.response.data)
+                console.error(err)
                 setDisplay('block')
                 setPassword('')
                 setUsername('')
@@ -56,7 +54,6 @@ const Auth = () => {
                 {register ? 'Sign Up' : 'Login'}
             </button>
             </form>
-            <p style={{display: display}}>{message}</p>
             <button onClick={() => setRegister(!register)}>
                 Need to {register ? 'Login' : 'Sign Up'}?
             </button>

@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallBack, createContext } from "react"; 
+import { useState, useEffect, createContext } from "react"; 
 
 let logoutTimer 
 
@@ -50,7 +50,7 @@ export const AuthContextProvider = (props) => {
     const [token, setToken] = useState(initialToken)
     const [userId, setUserId] = useState(initialId)
 
-    const logout = useCallBack(() => {
+    const logout = () => {
         setUserId(null)
         setToken(null)
         localStorage.removeItem('token')
@@ -60,7 +60,7 @@ export const AuthContextProvider = (props) => {
         if(logoutTimer){
             clearTimeout(logoutTimer)
         }
-    }, []) 
+    } 
 
     const login = (token, exp, userId) => {
         setToken(token)

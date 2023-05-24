@@ -1,5 +1,7 @@
 {
   "name": "vite-react-starter",
+  "proxy": "http://localhost:3003",
+  "main": "./src/server/main.js",
   "private": true,
   "version": "0.0.0",
   "scripts": {
