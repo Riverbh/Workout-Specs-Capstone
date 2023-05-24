@@ -56,7 +56,7 @@ const Auth = () => {
                 {register ? 'Sign Up' : 'Login'}
             </button>
             </form>
-            <p style={{display: display}}></p>
+            <p style={{display: display}}>{message}</p>
             <button onClick={() => setRegister(!register)}>
                 Need to {register ? 'Login' : 'Sign Up'}?
             </button>

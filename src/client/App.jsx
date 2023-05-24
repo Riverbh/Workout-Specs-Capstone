@@ -1,16 +1,18 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
+import { useContext, useState } from "react";
 import "./App.css";
 import Header from "./components/header";
 import Footer from "./components/footer";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import Home from "./components/homeComponents/homeScreen";
 import Profile from "./components/profileComponents/profileScreen";
-import Create from "./components/profileComponents/newPostCompnent/newPost"
-import Goals from "./components/goalsComponents/goalsScreen";
+import Create from "./components/newPostCompnent/newPost"
+import Auth from "./components/auth";
+
+import AuthContext from "./components/store/authContext";
 
 function App() {
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
+  const authCtx = useContext(AuthContext)
 
   return (
     <div className="App">
@@ -18,9 +20,9 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />}/>
-          <Route path="/profile" element={<Profile />}/>
-          <Route path="/profile/create" element={<Create />}/>
-          <Route path="/goals" element={<Goals />}/>
+          <Route path="/auth" element={!authCtx.token ? <Auth/> : <Navigate to="/"/>}/>
+          <Route path="/create" element={authCtx.token ? <Create /> : <Navigate to="/auth"/>}/>
+          <Route path="/profile" element={authCtx.token ? <Profile /> : <Navigate to="/auth"/>}/>
         </Routes>
       </main>
       <Footer />
