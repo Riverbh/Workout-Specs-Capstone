@@ -38,7 +38,7 @@ module.exports = {
             allowNull: false
         },
         time: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING({length: 30}),
             allowNull: false
         }
     }),
