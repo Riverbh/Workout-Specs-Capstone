@@ -4,7 +4,7 @@ const {SECRET} = process.env
 
 module.exports = {
     isAuthenticated: (req, res, next) => {
-        const headerToken = req.get('Authorized')
+        const headerToken = req.get('Authorization')
 
         if(!headerToken) {
             console.log('ERROR IN auth middleware')
@@ -12,6 +12,7 @@ module.exports = {
         }
 
         let token
+        console.log(headerToken)
 
         try {
             token = jwt.verify(headerToken, SECRET)

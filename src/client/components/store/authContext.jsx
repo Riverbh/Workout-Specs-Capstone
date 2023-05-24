@@ -43,8 +43,8 @@ export const AuthContextProvider = (props) => {
     let initialToken 
     let initialId 
     if (localData) {
-        initialId = localData.token
-        initialToken = localData.userId
+        initialId = localData.userId
+        initialToken = localData.token
     }
 
     const [token, setToken] = useState(initialToken)
