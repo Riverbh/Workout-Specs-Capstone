@@ -23,6 +23,7 @@ function App() {
           <Route path="/auth" element={!authCtx.token ? <Auth/> : <Navigate to="/"/>}/>
           <Route path="/create" element={authCtx.token ? <Create /> : <Navigate to="/auth"/>}/>
           <Route path="/profile" element={authCtx.token ? <Profile /> : <Navigate to="/auth"/>}/>
+          <Route path='*' element={<Navigate to='/'/>}/>
         </Routes>
       </main>
       <Footer />
