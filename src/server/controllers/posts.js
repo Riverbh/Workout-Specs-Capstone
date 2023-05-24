@@ -22,7 +22,7 @@ module.exports = {
                     attributes: ['username']
                 }]
             })
-            res.status(200).send(posts)
+            res.status(200).send(post)
         } catch (error) {
             console.log('ERROR IN getAllPosts')
             console.log(error)
