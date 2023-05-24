@@ -52,7 +52,7 @@ module.exports = {
             const {username, password} = req.body
             let foundUser = await User.findOne({where: {username}})
             if (foundUser) {
-                const isAuthenticated = bcrypt.compareSync(password, foundUser.hashedPass)
+                const isAuthenticated = bcrypt.compareSync(password, foundUser.password)
 
                 if(isAuthenticated) {
                     const token = createToken(foundUser.dataValues.username, foundUser.dataValues.id)

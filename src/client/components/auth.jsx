@@ -6,14 +6,14 @@ const Auth = () => {
     const [register, setRegister] = useState(true)
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
-    const [display, setDisplay] = useState('none')
+    // const [display, setDisplay] = useState('none')
 
     const authCtx = useContext(AuthContext)
 
     const submitHandler = (e) => {
         e.preventDefault()
 
-        setDisplay('none')
+        // setDisplay('none')
 
         const body = {
             username, 
@@ -28,7 +28,7 @@ const Auth = () => {
             })
             .catch(err => {
                 console.error(err)
-                setDisplay('block')
+                // setDisplay('block')
                 setPassword('')
                 setUsername('')
             })
