@@ -29,6 +29,24 @@ module.exports = {
             res.sendStatus(400)
         }
     },
+    getCurrentUserPosts: async (req, res) => {
+        try {
+            const {userId} = req.params
+            const post = await Post.findAll({
+                where: {userId: userId},
+                include: [{
+                    model: User,
+                    required: true,
+                    attributes: [`username`]
+                }]
+            })
+            res.status(200).send(post)
+        } catch (error) {
+            console.log('ERROR IN getCurrentUserPosts')
+            console.log(error)
+            res.sendStatus(400)
+        }
+    },
     deletePost: async (req,res) => {
         try {
             const {id} = req.params 

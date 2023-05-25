@@ -1,7 +1,7 @@
 const express = require("express");
 const ViteExpress = require("vite-express");
 const {login, register} = require('./controllers/auth')
-const {getAllPost, deletePost, addPost} = require('./controllers/posts')
+const {getAllPost, deletePost, addPost, getCurrentUserPosts} = require('./controllers/posts')
 const {isAuthenticated} = require('./middleware/isAuth')
 const db = require('./util/db')
 const {User, Post, Like, Goal} = require('./util/models')
@@ -29,10 +29,11 @@ app.post('/register', register)
 app.post('/login', login)
 
 //GET POSTS - no auth
-app.post('/posts', isAuthenticated, addPost)
 app.get('/posts', getAllPost)
 
 //CRUD POSTS - auth required
+app.post('/posts', isAuthenticated, addPost)
+app.get('/userposts/:userId', getCurrentUserPosts)
 app.delete('/posts/:id', isAuthenticated, deletePost)
 
 // db.sync({force: true})
