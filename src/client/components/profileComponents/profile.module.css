@@ -1,5 +1,7 @@
 .page {
     background-color: #e8f0f2;
+    max-height: 700px;
+    overflow: auto;
 }
 
 .container {

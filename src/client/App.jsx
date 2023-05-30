@@ -7,7 +7,7 @@ import Home from "./components/homeComponents/homeScreen";
 import Profile from "./components/profileComponents/profileScreen";
 import Create from "./components/newPostCompnent/newPost"
 import Auth from "./components/auth";
-import SearchContainer from "./components/homeComponents/searchContainer";
+import SearchContainer from "../client/components/searchContainer";
 
 import AuthContext from "./components/store/authContext";
 

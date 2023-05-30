@@ -1,0 +1,59 @@
+.container {
+  background-color: #e8f0f2;
+  padding: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heading {
+  color: #053742;
+  margin-bottom: 10px;
+}
+
+.select {
+  width: 35%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #a2dbfa;
+  border: none;
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: #39a2db;
+  color: #e8f0f2;
+  border: none;
+  cursor: pointer;
+  border-radius: 25px;
+}
+
+.div {
+    background-color: #e8f0f2;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .title {
+    color: #053742;
+    margin-bottom: 5px;
+  }
+  
+  .subtitle {
+    color: #39a2db;
+    margin-bottom: 5px;
+  }
+  
+  .instructions {
+    color: #053742;
+  }
+
+.scroll {
+  max-height: 500px;
+  overflow: auto;
+}
+
+
