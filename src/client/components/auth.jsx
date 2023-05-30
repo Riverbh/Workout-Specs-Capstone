@@ -6,6 +6,7 @@ const Auth = () => {
     const [register, setRegister] = useState(true)
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
+    const [isUsernameTaken, setIsUsernameTaken] = useState(false)
     // const [display, setDisplay] = useState('none')
 
     const authCtx = useContext(AuthContext)
@@ -19,6 +20,19 @@ const Auth = () => {
             username, 
             password
         }
+
+        // Check if the username is already taken (Example condition, replace with your own logic)
+    // if (username === username) {
+    //     setIsUsernameTaken(true);
+    //     alert('Username already taken')
+    //   } else {
+    //     // Proceed with the signup logic
+    //     console.log('Signing up...');
+    //     // Reset the username and password fields
+    //     setUsername('');
+    //     setPassword('');
+    //     setIsUsernameTaken(false);
+    //   }
 
         
         axios.post(register ? `/register` : `/login`, body)
