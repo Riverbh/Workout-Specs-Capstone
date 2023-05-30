@@ -4,6 +4,8 @@ import axios from "axios";
 import SearchContainer from "./searchContainer";
 import AuthContext from "../store/authContext";
 
+import classes from './home.module.css'
+
 const Home = () => {
 
     const [posts, setPosts] = useState([])
@@ -20,13 +22,19 @@ const Home = () => {
 
     const mappedPosts = posts.map(post => {
         return (
-            <section key={post.id}>
-                <h2>{post.title}</h2>
-                <h4>{post.user.username}</h4>
-                <p>{post.type}</p>
-                <p>{post.time}</p>
-                <p>{post.description}</p>
-            </section>
+            <div className={classes.container} key={post.id}>
+                <section className={classes.post}>
+                    <div className={classes.heading}>
+                        <h2 className={classes.postTitle}>{post.title}</h2>
+                        <h4 className={classes.user}>{post.user.username}</h4>
+                    </div>
+                    <div className={classes.content}>
+                        <p className={classes.typeTime}>{post.type}</p>
+                        <p className={classes.typeTime}>{post.time}</p>
+                        <p className={classes.postDescription}>{post.description}</p>
+                    </div>
+                </section>
+            </div>
         )
     })
 
