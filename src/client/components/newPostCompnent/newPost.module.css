@@ -1,6 +1,52 @@
-h1 {
+.postWorkout {
+    background-color: #e8f0f2;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
-}
+    height: 700px;
+  }
+  
+  .heading {
+    font-size: 50px;
+    color: #053742;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #a2dbfa;
+    border: none;
+    width: 500px;
+  }
+  
+  .textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #a2dbfa;
+    border: none;
+    height: 225px;
+  }
+  
+  .button {
+    padding: 10px 20px;
+    background-color: #39a2db;
+    color: #e8f0f2;
+    border: none;
+    cursor: pointer;
+  }
+  
+
+  
+  
+  
+  

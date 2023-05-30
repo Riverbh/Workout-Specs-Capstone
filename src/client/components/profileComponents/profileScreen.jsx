@@ -70,7 +70,7 @@ console.log(post)
     ) : (
         <section className={classes.page}>
             <div>
-                <h1 className={classes.pageHeader}>My Profile</h1>
+                <h1 className={classes.pageHeader}>My Post</h1>
             </div>
             <div>
                 <h1>You haven't posted yet!</h1>
