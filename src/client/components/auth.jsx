@@ -1,6 +1,7 @@
 import {useState, useContext} from "react";
 import axios from "axios";
 import AuthContext from "./store/authContext";
+import classes from './auth.module.css'
 
 const Auth = () => {
     const [register, setRegister] = useState(true)
@@ -49,29 +50,35 @@ const Auth = () => {
     }
 
     return (
-        <main>
-            <h1>Welcome!</h1>
-            <form onSubmit={submitHandler}>
-            <input 
-                type='text' 
-                placeholder='username' 
-                value={username}
-                onChange={e => setUsername(e.target.value)}
-            />
-            <input 
-                type='password' 
-                placeholder='password' 
-                value={password}
-                onChange={e => setPassword(e.target.value)} 
-            />
-            <button>
-                {register ? 'Sign Up' : 'Login'}
-            </button>
-            </form>
-            <button onClick={() => setRegister(!register)}>
-                Need to {register ? 'Login' : 'Sign Up'}?
-            </button>
-        </main>
+        <div className={classes.container}>
+            <div className={classes.centered}>
+                <main className={classes.main}>
+                    <h1 className={classes.title}>Welcome!</h1>
+                    <form className={classes.form} onSubmit={submitHandler}>
+                    <input 
+                        type='text' 
+                        placeholder='username' 
+                        value={username}
+                        onChange={e => setUsername(e.target.value)}
+                        className={classes.input}
+                    />
+                    <input 
+                        type='password' 
+                        placeholder='password' 
+                        value={password}
+                        onChange={e => setPassword(e.target.value)}
+                        className={classes.input} 
+                    />
+                    <button className={classes.button}>
+                        {register ? 'Sign Up' : 'Login'}
+                    </button>
+                    </form>
+                    <button className={classes.button} onClick={() => setRegister(!register)}>
+                        Need to {register ? 'Login' : 'Sign Up'}?
+                    </button>
+                </main>
+            </div>
+        </div>
     )
 }
 
