@@ -1,4 +1,4 @@
-header {
+/* header {
     background-color: #053742;
     height: 60px;
     width: 100%;
@@ -15,7 +15,7 @@ header {
     color: #E8F0F2;
 } */
 
-h1 {
+/* h1 {
     font-size: 30px;
     color: #E8F0F2;
 
@@ -35,7 +35,41 @@ h1 {
     color: #E8F0F2;
     margin-left: 50px;
     margin-right: 5px;
+}  */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #053742;
+  padding: 20px;
 }
+
+.logo {
+  color: #E8F0F2;
+  font-size: 24px;
+  margin: 0;
+}
+
+.navButton {
+  color: #E8F0F2;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.logoutButton {
+  color: #E8F0F2;
+  background-color: #39a2db;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.logoutButton:hover {
+    background-color: #a2dbfa;
+}
+
 
 p{
     color: #E8F0F2;

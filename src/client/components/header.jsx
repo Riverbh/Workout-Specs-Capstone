@@ -10,27 +10,27 @@ const Header = () => {
     const authCtx = useContext(AuthContext)
 
     return (
-        <header>
-            <h1>Fit Social</h1>
+        <header className={classes.header}>
+            <h1 className={classes.logo}>Fit Social</h1>
             <nav>
                 {
                     authCtx.token ? (
                             <>
-                            <NavLink className={classes.nav_button} to='/'>Home</NavLink>
+                            <NavLink className={classes.navButton} to='/'>Home</NavLink>
                     
-                            <NavLink className={classes.nav_button} to='/profile'>Profile</NavLink>
+                            <NavLink className={classes.navButton} to='/profile'>Profile</NavLink>
                         
-                            <NavLink className={classes.nav_button} to='/create'>Post</NavLink>
+                            <NavLink className={classes.navButton} to='/create'>Post</NavLink>
 
-                            <NavLink className={classes.nav_button} to='/search'>Search</NavLink>
+                            <NavLink className={classes.navButton} to='/search'>Search</NavLink>
 
-                            <button className={classes.logout_button} onClick={() => authCtx.logout()}>Logout</button>
+                            <button className={classes.logoutButton} onClick={() => authCtx.logout()}>Logout</button>
                             </>
                     ) : (
                             <>
-                            <NavLink className={classes.nav_button} to='/'>Home</NavLink>
+                            <NavLink className={classes.navButton} to='/'>Home</NavLink>
 
-                            <NavLink className={classes.nav_button} to='/auth'>Login/Sign Up</NavLink>
+                            <NavLink className={classes.navButton} to='/auth'>Login/Sign Up</NavLink>
                             </>
                     )
                 }  
