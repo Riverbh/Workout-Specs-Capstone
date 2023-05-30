@@ -29,6 +29,14 @@ h1 {
     margin-right: 10px;
 }
 
+.logout_button {
+    background-color: #053742;
+    font-size: 15px;
+    color: #E8F0F2;
+    margin-left: 50px;
+    margin-right: 5px;
+}
+
 p{
     color: #E8F0F2;
 }

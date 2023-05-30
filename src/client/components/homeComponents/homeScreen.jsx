@@ -43,16 +43,10 @@ const Home = () => {
     return mappedPosts.length >= 1 ? (
         <main>
             {mappedPosts}
-            <section>
-                <SearchContainer />
-            </section>
         </main>
     ) : (
         <main>
             <h1>There are no posts yet!</h1>
-            <section>
-                <SearchContainer />
-            </section>
         </main>
     )
 }
