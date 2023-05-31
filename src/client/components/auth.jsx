@@ -46,6 +46,12 @@ const Auth = () => {
                 // setDisplay('block')
                 setPassword('')
                 setUsername('')
+                if(!register){
+                    alert ("Username or password is incorrect!")
+                } else if(register){
+                    alert('Username or password already taken!')
+                }
+                
             })
     }
 
@@ -61,6 +67,7 @@ const Auth = () => {
                         value={username}
                         onChange={e => setUsername(e.target.value)}
                         className={classes.input}
+                        required
                     />
                     <input 
                         type='password' 
@@ -68,14 +75,18 @@ const Auth = () => {
                         value={password}
                         onChange={e => setPassword(e.target.value)}
                         className={classes.input} 
+                        required
                     />
-                    <button className={classes.button}>
+                    <button type='button' className={classes.buttonOut} onClick={() => setRegister(!register)}>
+                        Need to {register ? 'Login' : 'Sign Up'}?
+                    </button>
+                    <button type="submit" className={classes.button}>
                         {register ? 'Sign Up' : 'Login'}
                     </button>
                     </form>
-                    <button className={classes.button} onClick={() => setRegister(!register)}>
+                    {/* <button className={classes.buttonOut} onClick={() => setRegister(!register)}>
                         Need to {register ? 'Login' : 'Sign Up'}?
-                    </button>
+                    </button> */}
                 </main>
             </div>
         </div>

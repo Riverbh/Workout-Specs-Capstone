@@ -48,3 +48,16 @@
 .button:hover {
     background-color: #39a2db;
 }
+
+.buttonOut {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #053742;
+}
+
+.buttonOut:hover {
+    color: #39a2db;
+}
+
