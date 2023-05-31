@@ -46,7 +46,7 @@
 
 .user {
     color: #39A2DB;
-    
+    font-size: 20px;
 }
 
 .heading {
@@ -66,8 +66,8 @@
 }
 
 .button {
-    background-color: #a2dbfa;
-    color: #053742;
+    background-color: #39a2db;
+    color: #e8f0f2;
     padding: 10px;
     border: none;
     cursor: pointer;
@@ -77,7 +77,7 @@
 }
 
 .button:hover {
-    background-color: #39a2db;
+    background-color: #053742;
 }
 
 .pageHeader {
