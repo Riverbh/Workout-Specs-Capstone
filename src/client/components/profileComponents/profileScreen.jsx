@@ -13,8 +13,8 @@ const Profile = () => {
     const getUserPosts = useCallback(() => {
         axios.get(`/userposts/${userId}`)
             .then(res => {
-                console.log(res.data)
-                setPost(res.data)
+                const sortedPosts = res.data.sort((a, b) => b.id - a.id);
+                setPost(sortedPosts)
             })
             .catch(err => console.log(err))
     }, [userId])
