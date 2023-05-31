@@ -20,8 +20,8 @@ function App() {
       <Header />
       <main>
         <Routes>
-          <Route path="/" element={<Home />}/>
           <Route path="/auth" element={!authCtx.token ? <Auth/> : <Navigate to="/"/>}/>
+          <Route path="/" element={authCtx.token ? <Home /> : <Navigate to="/auth"/>}/>
           <Route path="/create" element={authCtx.token ? <Create /> : <Navigate to="/auth"/>}/>
           <Route path="/profile" element={authCtx.token ? <Profile /> : <Navigate to="/auth"/>}/>
           <Route path="/search" element={authCtx.token ? <SearchContainer/> : <Navigate to="/auth"/>}/>

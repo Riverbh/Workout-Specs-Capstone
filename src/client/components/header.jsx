@@ -28,9 +28,7 @@ const Header = () => {
                             </>
                     ) : (
                             <>
-                            <NavLink className={classes.navButton} to='/'>Home</NavLink>
-
-                            <NavLink className={classes.navButton} to='/auth'>Login/Sign Up</NavLink>
+                            <NavLink className={classes.navButton} to='/auth'></NavLink>
                             </>
                     )
                 }  
