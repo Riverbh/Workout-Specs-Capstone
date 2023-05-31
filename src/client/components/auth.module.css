@@ -19,6 +19,11 @@
 
 .title {
     color: #053742;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 30px;
+   padding-bottom: 15px;
 }
 
 .form {

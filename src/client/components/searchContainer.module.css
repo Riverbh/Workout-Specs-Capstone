@@ -12,6 +12,7 @@
 .heading {
   color: #053742;
   margin-bottom: 10px;
+  font-size: 35px;
 }
 
 .select {
@@ -44,6 +45,7 @@
   .title {
     color: #053742;
     margin-bottom: 5px;
+    font-size: 25px;
   }
   
   .subtitle {
