@@ -12,7 +12,9 @@ const Home = () => {
     useEffect(() => {
         axios.get('/posts')
         .then(res => {
-            setPosts(res.data)
+            // Sort the posts array in descending order based on the 'id'
+            const sortedPosts = res.data.sort((a, b) => b.id - a.id);
+            setPosts(sortedPosts)
         })
         .catch(err => {
             console.log(err)
