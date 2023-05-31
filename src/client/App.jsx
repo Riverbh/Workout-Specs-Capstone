@@ -7,7 +7,7 @@ import Home from "./components/homeComponents/homeScreen";
 import Profile from "./components/profileComponents/profileScreen";
 import Create from "./components/newPostCompnent/newPost"
 import Auth from "./components/auth";
-import SearchContainer from "../client/components/searchContainer";
+// import SearchContainer from "../client/components/searchContainer";
 
 import AuthContext from "./components/store/authContext";
 
@@ -24,7 +24,6 @@ function App() {
           <Route path="/" element={authCtx.token ? <Home /> : <Navigate to="/auth"/>}/>
           <Route path="/create" element={authCtx.token ? <Create /> : <Navigate to="/auth"/>}/>
           <Route path="/profile" element={authCtx.token ? <Profile /> : <Navigate to="/auth"/>}/>
-          <Route path="/search" element={authCtx.token ? <SearchContainer/> : <Navigate to="/auth"/>}/>
           <Route path='*' element={<Navigate to='/'/>}/>
         </Routes>
       </main>

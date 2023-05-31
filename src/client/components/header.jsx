@@ -22,8 +22,6 @@ const Header = () => {
                         
                             <NavLink className={classes.navButton} to='/create'>Post</NavLink>
 
-                            <NavLink className={classes.navButton} to='/search'>Search</NavLink>
-
                             <button className={classes.logoutButton} onClick={() => authCtx.logout()}>Logout</button>
                             </>
                     ) : (

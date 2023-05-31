@@ -2,6 +2,7 @@ import {useState, useEffect, useContext} from "react";
 import axios from "axios";
 
 import AuthContext from "../store/authContext";
+import SearchContainer from "../searchContainer";
 
 import classes from './home.module.css'
 
@@ -42,13 +43,23 @@ const Home = () => {
     console.log(mappedPosts)
 
     return mappedPosts.length >= 1 ? (
-        <main className={classes.scroll}>
-            {mappedPosts}
-        </main>
+        <div className={classes.div}>
+            <main className={classes.scroll}>
+                {mappedPosts}
+            </main>
+            <section>
+                <SearchContainer/>
+            </section>
+        </div>
     ) : (
-        <main>
-            <h1>There are no posts yet!</h1>
-        </main>
+        <div className={classes.div}>
+            <main className={classes.scroll}>
+                <h1>There are no posts yet!</h1>
+            </main>
+            <section>
+                <SearchContainer/>
+            </section>
+        </div>
     )
 }
 
